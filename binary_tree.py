@@ -31,34 +31,29 @@ class Tree():
 				else:
 					self.insert_node(self.root.left, value)
 
-	# def print_tree(self):
-	# 	if self.root == None:
-	# 		print("The tree is empty")
-	# 	else:
-	# 		if root.value is None:
-	# 			#go right
-	# 			if root.right  None:
-					
-	# 			else:
-	# 				self.insert_node(root.right, value)
-	# 		else:
-	# 			#go left
-	# 			if root.left is None:
-	# 				#make a right node
-	# 				root.left = Node(value)
-	# 			else:
-	# 				self.insert_node(root.left, value)
+	def tree_traversal(self):
+		self.tree_traversal_preorder(self.root)
+
+	#preorder traversal root left right
+	def tree_traversal_preorder(Node):
+		#first stop condition
+		if Node != None:
+			self.tree_traversal_preorder(Node.left)
+			print(Node.value)
+			self.tree_traversal_preorder(Node.right)
+
+
+
 
 
 alpha = Tree()
 alpha.insert_node(20)
 alpha.insert_node(30)
 alpha.insert_node(10)
-print(alpha.root.value)
-print(alpha.root.right.value)
-print(alpha.root.left.value)
-
-
+# print(alpha.root.value)
+# print(alpha.root.right.value)
+# print(alpha.root.left.value)
+alpha.tree_traversal()
 
 
 	
